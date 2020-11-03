@@ -1,0 +1,40 @@
+<mat-card>
+  <form (submit)="onAdicionarLembrete(lembreteForm)" #lembreteForm="ngForm">
+
+    <H2>Crie um Lembrete</H2>
+
+    <div class="row">
+      <div class="form-group col-12">
+        <label></label>
+        <input type="text" placeholder="Título" name="titulo" ngModel #titulo="ngModel" class="form-control p-4" />
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="form-group col-md-6">
+        <label></label>
+        <input type="date" placeholder="Criado em" name="criadoem" ngModel #criadoem="ngModel"
+          class="form-control p-4" />
+      </div>
+
+      <div class="form-group col-md-6">
+        <label></label>
+        <input type="date" placeholder="Prazo" name="prazo" ngModel #prazo="ngModel" class="form-control p-4" />
+      </div>
+
+      <div class="form-group col-md-12">
+        <label></label>
+        <input type="text" placeholder="Descrição" name="descricao" ngModel #descricao="ngModel"
+          class="form-control p-4" />
+      </div>
+
+    </div>
+
+    <button color="warn" mat-raised-button>
+      Inserir Lembrete
+    </button>
+
+  </form>
+  <app-lembrete-lista></app-lembrete-lista>
+</mat-card>

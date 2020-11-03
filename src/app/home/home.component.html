@@ -1,0 +1,69 @@
+<mat-tab-group mat-align-tabs="start">
+
+  <mat-tab label="Home">
+
+    <h1>Bem Vindo!</h1>
+    <p>
+      A partir de agora você consultar e criar lembretes que irão te ajudar a organizar sua rotina
+    </p>
+
+    <mat-grid-list cols="3" rowHeight="1000px">
+      <mat-grid-tile>
+        <mat-card class="example-card">
+          <mat-card-header>
+            <mat-card-title>Em Casa</mat-card-title>
+            <mat-card-subtitle></mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="assets/casa.jpg" alt="Casa">
+          <mat-card-content>
+            <p>
+              Nunca mais se esqueça de fazer suas compras, pagar contas, dar recados, tomar seus remédios em dia.
+            </p>
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-card class="example-card">
+          <mat-card-header>
+            <mat-card-title>No Trabalho</mat-card-title>
+            <mat-card-subtitle></mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="assets/trabalho.jpg" alt="Trabalho">
+          <mat-card-content>
+            <p>
+              Organize suas metas, estabeleça prazos, não esqueça de tarefas pendentes.
+            </p>
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-card class="example-card">
+          <mat-card-header>
+            <mat-card-title>Em suas Viagens</mat-card-title>
+            <mat-card-subtitle></mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="assets/viagem.jpg" alt="Viagem">
+          <mat-card-content>
+            <p>
+              Marque o horário de sua viagem, seu período de hospedagem, crie seu roteiro turístico.
+            </p>
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+
+  </mat-tab>
+
+  <mat-tab label="Criar Lembrete">
+
+    <app-lembrete-inserir></app-lembrete-inserir>
+
+  </mat-tab>
+
+  <mat-tab label="Meus Lembretes">
+
+    <app-lembrete-lista></app-lembrete-lista>
+
+  </mat-tab>
+
+</mat-tab-group>

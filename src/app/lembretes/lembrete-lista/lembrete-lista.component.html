@@ -1,0 +1,19 @@
+<mat-toolbar color="warn" style="font-size: medium; margin-top: 50px;"> Meus Lembretes</mat-toolbar>
+<mat-accordion *ngIf="lembretes.length >0">
+  <mat-expansion-panel *ngFor="let lembrete of lembretes">
+    <mat-expansion-panel-header>Título: {{lembrete.titulo}}</mat-expansion-panel-header>
+    <hr />
+    <p>Criado Em: {{lembrete.criadoem}}</p>
+    <hr />
+    <p>Prazo: {{lembrete.prazo}}</p>
+    <hr />
+    <p>Descrição: {{lembrete.descricao}}</p>
+    <mat-action-row>
+      <button mat-button color="primary">Editar</button>
+      <button mat-button color="warn">REMOVER</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordion>
+<p class="mat-body-1" style="text-align: center;" *ngIf="lembretes.length <=0">
+  Nenhum lembrete cadastrado
+</p>

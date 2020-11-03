@@ -1,0 +1,21 @@
+<mat-toolbar color="warn" style="font-size: medium; margin-top: 50px;">Usuários</mat-toolbar>
+<mat-accordion *ngIf="usuarios.length > 0">
+  <mat-expansion-panel *ngFor="let usuario of usuarios">
+    <mat-expansion-panel-header>Nome: {{usuario.nome}}</mat-expansion-panel-header>
+    <hr />
+    <p>Sexo: {{usuario.sexo}}</p>
+    <hr />
+    <p>Telefone: {{usuario.telefone}}</p>
+    <hr />
+    <p>Email: {{usuario.email}}</p>
+    <hr />
+    <p>Senha: {{usuario.senha}}</p>
+    <mat-action-row>
+      <button mat-button color="primary">Editar</button>
+      <button mat-button color="warn">REMOVER</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordion>
+<p class="mat-body-1" style="text-align: center;" *ngIf="usuarios.length <=0">
+  Nenhum usuario cadastrado
+</p>
